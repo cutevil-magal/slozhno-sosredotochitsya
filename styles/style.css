@@ -254,7 +254,7 @@
   border: none;
   text-transform: lowercase;
   color: var(--title-color);
-  padding: 3px 13px;
+  padding: 4px 13px;
   line-height: 18px;
   font-size: inherit;
 }
@@ -361,8 +361,8 @@
   }
 
   .header__theme-menu-list {
-    /* margin-bottom: 17px; */
-    margin-block-end: 17px;
+    /* margin-bottom: 15px; */
+    margin-block-end: 15px;
   }
 
   .header__subtitle {

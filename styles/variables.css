@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --accent-color: #FF8DCB;
+  /* --accent-color: #FF8DCB;
   --bg-color: #ffeef7;
 
   --header__title-color: #FFC2E6;
@@ -13,5 +13,16 @@
   --subtitle-color: #353430;
   --text-color: #353430;
   
-  --main-font: 'IBM Plex mono';
+  --main-font: 'IBM Plex mono'; */
+  --accent-color: #FF0070;
+    --bg-color: #000028;
+    
+    --header__title-color: #DB00FF;
+    --header__title-shadow: #FF0070;
+  
+    --title-color: #FF0070;
+    --subtitle-color: #000028;
+    --text-color: #F1B2CE;
+    
+    --main-font: 'IBM Plex mono';
 }

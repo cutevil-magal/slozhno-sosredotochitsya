@@ -4,7 +4,6 @@
   переключая тему
 */
 :root .theme_light {
-  /* Переменные светлой темы */  
   --accent-color: #FF8DCB;
   --bg-color: #ffeef7;
 
@@ -18,21 +17,27 @@
   --main-font: 'IBM Plex mono';
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
+@media (prefers-color-scheme: light) {
+  .page {
     --accent-color: #FF8DCB;
-  --bg-color: #ffeef7;
+    --bg-color: #ffeef7;
 
-  --header__title-color: #FFC2E6;
-  --header__title-shadow: #FF0070;
+    --header__title-color: #FFC2E6;
+    --header__title-shadow: #FF0070;
 
-  --title-color: #353430;
-  --subtitle-color: #353430;
-  --text-color: #353430;
-  
-  --main-font: 'IBM Plex mono';
+    --title-color: #353430;
+    --subtitle-color: #353430;
+    --text-color: #353430;
+    
+    --main-font: 'IBM Plex mono';
+
+    background-image: url(../images/cover-image-light.png);
     }
-} */
+
+    .header__rec {
+      display: none;
+    }
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
