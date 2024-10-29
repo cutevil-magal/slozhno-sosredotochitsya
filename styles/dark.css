@@ -3,7 +3,7 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
+:root .theme_dark {
   /* Дублируем переменные для тёмной темы */
   --accent-color: #FF0070;
   --bg-color: #000028;
@@ -18,12 +18,30 @@
   --main-font: 'IBM Plex mono';
 }
 
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #FF0070;
+    --bg-color: #000028;
+    
+    --header__title-color: #DB00FF;
+    --header__title-shadow: #FF0070;
+  
+    --title-color: #FF0070;
+    --subtitle-color: #000028;
+    --text-color: #F1B2CE;
+    
+    --main-font: 'IBM Plex mono';
+    }
+}
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-color: #FF0070;
+  /* --accent-color: #FF0070;
   --bg-color: #000028;
   
   --header__title-color: #DB00FF;
@@ -33,12 +51,10 @@
   --subtitle-color: #000028;
   --text-color: #F1B2CE;
   
-  --main-font: 'IBM Plex mono';
+  --main-font: 'IBM Plex mono'; */
 
   background-image: url(../images/cover-image-dark.png);
 }
-
-
 
 .theme_dark .header__rec {
   display: block;
@@ -46,8 +62,10 @@
   top: 10px;
   right: 10px;
   font-size: 18px;
-  margin-top: 12px;
-  margin-right: 20px;
+  /* margin-top: 12px; */
+  margin-block-start: 12px;
+  /* margin-right: 20px; */
+  margin-inline-end: 20px;
   color: var(--accent-color);
 }
 
@@ -66,7 +84,8 @@
   transform: translateY(-50%);
   width: 9px;
   height: 9px;
-  margin-right: 9px;
+  /* margin-right: 9px; */
+  margin-inline-end: 9px;
   background-color: var(--accent-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
@@ -87,7 +106,9 @@
 
 @media (width < 768px) {
   .theme_dark .header__rec {
-    margin-top: 0;
-    margin-right: 10px;
+    /* margin-top: 0; */
+    margin-block-start: 0;
+    /* margin-right: 10px; */
+    margin-inline-end: 10px;
   }
 }

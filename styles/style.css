@@ -2,28 +2,21 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  /* background-color: var(--bg-color); */
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
   color: var(--text-color);
-  /* width: 1024px; */
   background-image: url(../images/cover-image-light.png);
   background-position: bottom;
-  /* background-position: center; */
+  /* background-position: center; ??? */
   background-size: cover;
   background-attachment: fixed;
 }
 /* --------------------------- header ---------------------------- */
 .header {
   display: grid;
-  /* max-height: 768px; */
   grid-template-rows: 1fr 2fr 1fr;
   grid-template-columns: 1fr minmax(355px, 491px);
   padding: 20px;
-  
-  /* background-image: url(../images/cover-image-light.png);
-  background-position: bottom;
-  background-repeat: no-repeat; */
 }
 
 .header__rec {
@@ -96,18 +89,23 @@
 /* --------------------------- section ---------------------------- */
 
 .content__section {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 80px;
+  /* padding-right: 20px; */
+  padding-inline-end: 20px;
+  /* padding-left: 20px; */
+  padding-inline-start: 20px;
+  /* padding-bottom: 80px; */
+  padding-block-end: 80px;
   display: grid;
 }
 
 .content__section:first-child {
-  padding-top: 60px;
+  /* padding-top: 60px; */
+  padding-block-start: 60px;
 }
 
 .content__section:last-child {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
+  padding-block-end: 60px;
 }
 
 .content__title,
@@ -118,7 +116,8 @@
 }
 
 .content__subtitle {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  margin-block-end: 10px;
 }
 
 .content__text {
@@ -177,7 +176,8 @@
 /* --------------------------- section__visual-aid ---------------------------- */
 
 .section__visual-aid .content__title {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  margin-block-end: 20px;
 }
 
 .content__gallery {
@@ -235,7 +235,8 @@
 }
 
 .content__text-link:hover {
-  border-bottom: 1px solid var(--text-color);
+  /* border-bottom: 1px solid var(--text-color); */
+  border-block-end: 1px solid var(--text-color);
 }
 
 .content__text-link:focus {
@@ -267,7 +268,8 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--title-color);
+  /* border-bottom: 1px solid var(--title-color); */
+  border-block-end: 1px solid var(--title-color);
 }
 
 .header__theme-menu-button_active {
@@ -275,11 +277,18 @@
 }
 
 /* --------------------------- media ---------------------------- */
+@media (width > 1024px) {
+  .section__focus-issue,
+  .section__better-focus {
+    grid-template-columns: 1fr 2fr;
+  }
+}
 
 @media (width < 1024px) {
   .header__theme-menu-list {
     flex-direction: column;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin-block-end: 10px;
   }
 
   .header__theme-menu {
@@ -304,11 +313,13 @@
   }
 
   .header__theme-menu-list {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin-block-end: 10px;
   }
 
   .content__section:last-child {
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
+    padding-block-end: 60px;
   }
 
   .section__focus-issue,
@@ -350,7 +361,8 @@
   }
 
   .header__theme-menu-list {
-    margin-bottom: 17px;
+    /* margin-bottom: 17px; */
+    margin-block-end: 17px;
   }
 
   .header__subtitle {
@@ -358,25 +370,23 @@
   }
 
   .content__section {
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 50px;
+    /* padding-right: 10px; */
+    padding-inline-end: 10px;
+    /* padding-left: 10px; */
+    padding-inline-start: 10px;
+    /* padding-bottom: 50px; */
+    padding-block-end: 50px;
   }
   
   .content__section:first-child {
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    padding-block-start: 40px;
   }
   
   .content__section:last-child {
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
+    padding-block-end: 40px;
   }
-
-  /* .section__focus-issue,
-  .section__attention-reduction,
-  .section__better-focus,
-  .content__gallery {
-    grid-template-columns: 1fr;
-  } */
 
   .content__section,
   .content__gallery {
@@ -390,7 +400,8 @@
     gap: 10px;
   }
   .section__visual-aid .content__title {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin-block-end: 10px;
   }
 
   
