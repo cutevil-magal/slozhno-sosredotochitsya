@@ -39,7 +39,9 @@
 }
 
 
+
 .theme_dark .header__rec {
+  display: block;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -49,14 +51,14 @@
   color: var(--accent-color);
 }
 
-.theme_dark .header__rec::after  {
+.theme_dark .header__rec::after {
   content: 'REC';
   position: relative;
   margin: 0 18px 0 0;
   font-family: inherit;
 }
 
-.theme_dark .header__rec::before  {
+.theme_dark .header__rec::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -71,7 +73,7 @@
 }
 
 .theme_dark .title-decor,
-.theme_dark .section__visual-aid .content__title  {
+.theme_dark .section__visual-aid .content__title {
   color: var(--subtitle-color);
 }
 
@@ -79,3 +81,13 @@
   color: var(--accent-color);
 }
 
+.theme_dark .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 214, 0.4);
+}
+
+@media (width < 768px) {
+  .theme_dark .header__rec {
+    margin-top: 0;
+    margin-right: 10px;
+  }
+}
