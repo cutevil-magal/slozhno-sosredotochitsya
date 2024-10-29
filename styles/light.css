@@ -62,3 +62,7 @@
 .theme_light .header__rec {
   display: none;
 }
+
+.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4);
+}
