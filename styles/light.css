@@ -18,7 +18,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page {
+  :root {
     --accent-color: #FF8DCB;
     --bg-color: #ffeef7;
 
@@ -30,13 +30,15 @@
     --text-color: #353430;
     
     --main-font: 'IBM Plex mono';
-
+  }
+  
+  .page {
     background-image: url(../images/cover-image-light.png);
-    }
+  }
 
-    .header__rec {
-      display: none;
-    }
+  .header__rec {
+    display: none;
+  }
 }
 
 .page.theme_light {
@@ -44,18 +46,6 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  /* --accent-color: #FF8DCB;
-  --bg-color: #ffeef7;
-
-  --header__title-color: #FFC2E6;
-  --header__title-shadow: #FF0070;
-
-  --title-color: #353430;
-  --subtitle-color: #353430;
-  --text-color: #353430;
-  
-  --main-font: 'IBM Plex mono'; */
-
   background-image: url(../images/cover-image-light.png);
 }
 

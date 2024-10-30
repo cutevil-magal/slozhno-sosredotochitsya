@@ -4,7 +4,6 @@
   переключая тему
 */
 :root .theme_dark {
-  /* Дублируем переменные для тёмной темы */
   --accent-color: #FF0070;
   --bg-color: #000028;
   
@@ -18,10 +17,8 @@
   --main-font: 'IBM Plex mono';
 }
 
-
-
 @media (prefers-color-scheme: dark) {
-  .page {
+  :root {
     --accent-color: #FF0070;
     --bg-color: #000028;
     
@@ -33,62 +30,68 @@
     --text-color: #F1B2CE;
     
     --main-font: 'IBM Plex mono';
-
+  }
+  
+  .page {
     background-image: url(../images/cover-image-dark.png);
-    }
+  }
+
+  .header__rec {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    /* margin-top: 12px; */
+    margin-block-start: 12px;
+    /* margin-right: 20px; */
+    margin-inline-end: 20px;
+    color: var(--accent-color);
+  }
+
+  .header__rec::after {
+    content: 'REC';
+    position: relative;
+    margin: 0 18px 0 0;
+    font-family: inherit;
+  }
+
+  .header__rec::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    /* margin-right: 9px; */
+    margin-inline-end: 9px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--accent-color);
+  }
+
+  .title-decor,
+  .section__visual-aid .content__title {
+    color: var(--subtitle-color);
+  }
+
+  .content__title {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(255, 0, 214, 0.4);
+  }
+
+  @media (width < 768px) {
     .header__rec {
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 18px;
-      /* margin-top: 12px; */
-      margin-block-start: 12px;
-      /* margin-right: 20px; */
-      margin-inline-end: 20px;
-      color: var(--accent-color);
+      /* margin-top: 3px; */
+      margin-block-start: 3px;
+      /* margin-right: 10px; */
+      margin-inline-end: 10px;
     }
-    .header__rec::after {
-      content: 'REC';
-      position: relative;
-      margin: 0 18px 0 0;
-      font-family: inherit;
-    }
-    .header__rec::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -10px;
-      transform: translateY(-50%);
-      width: 9px;
-      height: 9px;
-      /* margin-right: 9px; */
-      margin-inline-end: 9px;
-      background-color: var(--accent-color);
-      border-radius: 50%;
-      box-shadow: 0 0 4px 2px var(--accent-color);
-    }
-    .title-decor,
-    .section__visual-aid .content__title {
-      color: var(--subtitle-color);
-    }
-
-    .content__title {
-      color: var(--accent-color);
-    }
-
-    .header__theme-menu-button:hover {
-      outline: 1px solid rgba(255, 0, 214, 0.4);
-    }
-
-    @media (width < 768px) {
-      .header__rec {
-        /* margin-top: 3px; */
-        margin-block-start: 3px;
-        /* margin-right: 10px; */
-        margin-inline-end: 10px;
-      }
-    }
+  }
 
 }
 
