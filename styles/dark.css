@@ -27,7 +27,7 @@
 }
 
 @media (width < 768px) {
-  :root .theme_dark{
+  :root .theme_dark {
     --grid-gap-variadle: 10px;
     --title-accent__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
