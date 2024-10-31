@@ -3,18 +3,6 @@
   и их переопределение под различные устройства
 */
 :root {
-  /* --accent-color: #FF8DCB;
-  --bg-color: #ffeef7;
-
-  --header__title-color: #FFC2E6;
-  --header__title-shadow: #FF0070;
-
-  --title-color: #353430;
-  --subtitle-color: #353430;
-  --text-color: #353430;
-  
-  --main-font: 'IBM Plex mono'; */
-  
   --accent-color: #FF0070;
   --bg-color: #000028;
     
@@ -26,4 +14,20 @@
   --text-color: #F1B2CE;
     
   --main-font: 'IBM Plex mono';
+
+  --grid-gap-static: 20px;
+  --grid-gap-variadle: 20px;
+
+  --page-background-image: url(../images/cover-image-dark.png);
+  --button-hover__border-color:rgba(255, 0, 112, 0.4);
+
+  --header__rec-display: block;
+  --title-accent__font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+@media (width < 768px) {
+  :root {
+    --grid-gap-variadle: 10px;
+    --title-accent__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }

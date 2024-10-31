@@ -15,6 +15,22 @@
   --text-color: #F1B2CE;
   
   --main-font: 'IBM Plex mono';
+
+  --grid-gap-static: 20px;
+  --grid-gap-variadle: 20px;
+
+  --page-background-image: url(../images/cover-image-dark.png);
+  --button-hover__border-color:rgba(255, 0, 112, 0.4);
+
+  --header__rec-display: block;
+  --title-accent__font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+@media (width < 768px) {
+  :root .theme_dark{
+    --grid-gap-variadle: 10px;
+    --title-accent__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,69 +46,23 @@
     --text-color: #F1B2CE;
     
     --main-font: 'IBM Plex mono';
-  }
-  
-  .page {
-    background-image: url(../images/cover-image-dark.png);
-  }
 
-  .header__rec {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    /* margin-top: 12px; */
-    margin-block-start: 12px;
-    /* margin-right: 20px; */
-    margin-inline-end: 20px;
-    color: var(--accent-color);
-  }
+    --grid-gap-static: 20px;
+    --grid-gap-variadle: 20px;
 
-  .header__rec::after {
-    content: 'REC';
-    position: relative;
-    margin: 0 18px 0 0;
-    font-family: inherit;
-  }
+    --page-background-image: url(../images/cover-image-dark.png);
+    --button-hover__border-color:rgba(255, 0, 112, 0.4);
 
-  .header__rec::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
-    width: 9px;
-    height: 9px;
-    /* margin-right: 9px; */
-    margin-inline-end: 9px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--accent-color);
-  }
-
-  .title-decor,
-  .section__visual-aid .content__title {
-    color: var(--subtitle-color);
-  }
-
-  .content__title {
-    color: var(--accent-color);
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgba(255, 0, 214, 0.4);
+    --header__rec-display: block;
+    --title-accent__font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   @media (width < 768px) {
-    .header__rec {
-      /* margin-top: 3px; */
-      margin-block-start: 3px;
-      /* margin-right: 10px; */
-      margin-inline-end: 10px;
+    :root {
+      --grid-gap-variadle: 10px;
+      --title-accent__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     }
   }
-
 }
 
 .page.theme_dark {
@@ -100,62 +70,5 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .header__rec {
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  /* margin-top: 12px; */
-  margin-block-start: 12px;
-  /* margin-right: 20px; */
-  margin-inline-end: 20px;
-  color: var(--accent-color);
-}
-
-.theme_dark .header__rec::after {
-  content: 'REC';
-  position: relative;
-  margin: 0 18px 0 0;
-  font-family: inherit;
-}
-
-.theme_dark .header__rec::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 9px;
-  /* margin-right: 9px; */
-  margin-inline-end: 9px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-}
-
-.theme_dark .title-decor,
-.theme_dark .section__visual-aid .content__title {
-  color: var(--subtitle-color);
-}
-
-.theme_dark .content__title {
-  color: var(--accent-color);
-}
-
-.theme_dark .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 214, 0.4);
-}
-
-@media (width < 768px) {
-  .theme_dark .header__rec {
-    /* margin-top: 3px; */
-    margin-block-start: 3px;
-    /* margin-right: 10px; */
-    margin-inline-end: 10px;
-  }
-}
