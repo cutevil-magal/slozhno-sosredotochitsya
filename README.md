@@ -121,12 +121,25 @@ slozhno-sosredotochitsya/
 
 ### Переключатель тем
 ```javascript
-const themeButtons = document.querySelectorAll('.header__theme-menu-button');
-themeButtons.forEach(button => {
+themeButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const theme = button.dataset.theme;
-    document.documentElement.className = `theme-${theme}`;
-    localStorage.setItem('theme', theme);
+    themeButtons.forEach((btn) => {
+      btn.classList.remove('header__theme-menu-button_active');
+      btn.removeAttribute('disabled');
+    });
+    if (
+      [...button.classList].includes('header__theme-menu-button_type_light')
+    ) {
+      changeTheme('light');
+    } else if (
+      [...button.classList].includes('header__theme-menu-button_type_dark')
+    ) {
+      changeTheme('dark');
+    } else {
+      changeTheme('auto');
+    }
+    button.classList.add('header__theme-menu-button_active');
+    button.setAttribute('disabled', true);
   });
 });
 ```
