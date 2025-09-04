@@ -72,7 +72,7 @@ slozhno-sosredotochitsya/
 │   ├── style.css           # Основные стили
 │   ├── dark.css            # Стили тёмной темы
 │   ├── light.css           # Стили светлой темы
-│   └── fonts.css           # Подключение шрифтов
+│   └── globals.css         # Общие стили тем
 ├── fonts/                  # Локальные шрифты
 ├── images/                 # Изображения
 ├── scripts/
